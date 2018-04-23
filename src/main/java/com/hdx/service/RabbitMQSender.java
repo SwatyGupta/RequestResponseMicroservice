@@ -13,6 +13,14 @@ public class RabbitMQSender {
 	@Autowired
 	private AmqpTemplate amqpTemplate;
 	
+	public AmqpTemplate getAmqpTemplate() {
+		return amqpTemplate;
+	}
+
+	public void setAmqpTemplate(AmqpTemplate amqpTemplate) {
+		this.amqpTemplate = amqpTemplate;
+	}
+	
 	@Value("${response.rabbitmq.exchange}")
 	private String exchange;
 	
